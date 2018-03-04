@@ -1,3 +1,19 @@
 body {
     padding-top: 5rem;
+    background-color: #66f6cf;
+}
+
+h1{
+    text-align:center;
+    color:blue;
+    font-weight:bold;
+}
+
+img{
+    margin:auto;
+
+}
+
+.img{
+    text-align:center;
 }

@@ -41,13 +41,13 @@ def login():
         if user is not None:
             login_user(user)
             flash("Youn are sucessfully logged in","success")
-            return redirect(url_for("secure-page"))  # they should be redirected to a secure-page route instead
+            return redirect(url_for("secure_page"))  # they should be redirected to a secure-page route instead
         else:
             flash("Incorrect username or password","danger")
     return render_template("login.html", form=form)
 
 
-@app.route('/secure-page')
+@app.route('/secure_page')
 @login_required
 def secure_page():
     """Render a secure page on our website that only logged in users can access."""
