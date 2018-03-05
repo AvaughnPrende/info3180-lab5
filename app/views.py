@@ -60,6 +60,15 @@ def secure_page():
 def load_user(id):
     return UserProfile.query.get(int(id))
 
+
+
+@app.route("/logout")
+@login_required
+def logout():
+    logout_user()
+    flash('You have been logged out.', 'danger')
+    return redirect(url_for('home'))
+    
 ###
 # The functions below should be applicable to all Flask apps.
 ###
